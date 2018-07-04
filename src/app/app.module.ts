@@ -16,6 +16,8 @@ import { Injectable, Injector } from '@angular/core';
 import { NowPlayingPage } from '../pages/now-playing/now-playing';
 import { NowPlayingProvider } from '../providers/now-playing/now-playing';
 import { DetailsPage } from '../pages/details/details';
+import { UpcomingProvider } from '../providers/upcoming/upcoming';
+import { UpcomingPage } from '../pages/upcoming/upcoming';
 
 Pro.init('bf5b53eb', {
   appVersion: '0.0.1'
@@ -47,6 +49,7 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     HomePage,
     NowPlayingPage,
+    UpcomingPage,
     DetailsPage
   ],
   imports: [
@@ -59,7 +62,8 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     HomePage,
     NowPlayingPage,
-    DetailsPage
+    DetailsPage,
+    UpcomingPage
   ],
   providers: [
     StatusBar,
@@ -68,8 +72,9 @@ export class MyErrorHandler implements ErrorHandler {
     IonicErrorHandler,
     [{ provide: ErrorHandler, useClass: MyErrorHandler }],
     NowPlayingProvider,
+    HttpClient,
     HttpClientModule,
-    HttpClient
+    UpcomingProvider
   ]
 })
 export class AppModule {}
