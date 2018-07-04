@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +15,7 @@ import { Pro } from '@ionic/pro';
 import { Injectable, Injector } from '@angular/core';
 import { NowPlayingPage } from '../pages/now-playing/now-playing';
 import { NowPlayingProvider } from '../providers/now-playing/now-playing';
+import { DetailsPage } from '../pages/details/details';
 
 Pro.init('bf5b53eb', {
   appVersion: '0.0.1'
@@ -44,7 +46,8 @@ export class MyErrorHandler implements ErrorHandler {
   declarations: [
     MyApp,
     HomePage,
-    NowPlayingPage
+    NowPlayingPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ export class MyErrorHandler implements ErrorHandler {
   entryComponents: [
     MyApp,
     HomePage,
-    NowPlayingPage
+    NowPlayingPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,
@@ -64,7 +68,8 @@ export class MyErrorHandler implements ErrorHandler {
     IonicErrorHandler,
     [{ provide: ErrorHandler, useClass: MyErrorHandler }],
     NowPlayingProvider,
-    HttpClientModule
+    HttpClientModule,
+    HttpClient
   ]
 })
 export class AppModule {}

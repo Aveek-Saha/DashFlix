@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 
 
 import { NowPlayingProvider } from "../../providers/now-playing/now-playing";
+import { DetailsPage } from "../details/details";
 
 /**
  * Generated class for the NowPlayingPage page.
@@ -25,6 +26,12 @@ export class NowPlayingPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public nowPlaying: NowPlayingProvider) {
 
     this.movies = this.nowPlaying.getNowPlaying(this.page);
+  }
+
+  itemSelected(item) {
+    this.navCtrl.push(DetailsPage, {
+      item: item
+    });
   }
 
   ionViewDidLoad() {
