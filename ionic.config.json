@@ -1,6 +1,6 @@
 {
   "name": "DashFlix",
-  "app_id": "",
+  "app_id": "bf5b53eb",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
