@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,6 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // feel free to merge into existing imports above.
 import { Pro } from '@ionic/pro';
 import { Injectable, Injector } from '@angular/core';
+import { NowPlayingPage } from '../pages/now-playing/now-playing';
+import { NowPlayingProvider } from '../providers/now-playing/now-playing';
 
 Pro.init('bf5b53eb', {
   appVersion: '0.0.1'
@@ -42,24 +44,27 @@ export class MyErrorHandler implements ErrorHandler {
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    NowPlayingPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    NowPlayingPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IonicErrorHandler,
-    [{ provide: ErrorHandler, useClass: MyErrorHandler }]
+    [{ provide: ErrorHandler, useClass: MyErrorHandler }],
+    NowPlayingProvider,
+    HttpClientModule
   ]
 })
 export class AppModule {}
