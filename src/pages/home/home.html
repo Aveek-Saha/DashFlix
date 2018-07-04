@@ -8,11 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h4 ion-text color="dark">Looking for something?</h4>
+      <ion-item>
+        <ion-input type="text" value=""></ion-input>
+        <button ion-button color="dark" clear icon-only item-right>
+          <ion-icon name='search' is-active="false"></ion-icon>
+        </button>
+      </ion-item>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
