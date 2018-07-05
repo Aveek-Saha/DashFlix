@@ -3,18 +3,17 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Popular</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h4 ion-text color="dark">Looking for something?</h4>
-      <ion-item>
-        <ion-input type="text" value=""></ion-input>
-        <button ion-button color="dark" clear icon-only item-right>
-          <ion-icon name='search' is-active="false"></ion-icon>
-        </button>
-      </ion-item>
-
-
+<ion-content>
+    <ion-card *ngFor="let movie of (movies | async)?.results" (click)="itemSelected(movie)">
+      <img *ngIf="movie.backdrop_path!=null; else noPoster" src="https://image.tmdb.org/t/p/w1280{{movie.backdrop_path}}" />
+      <div class="card-title">{{ movie.title }}</div>
+      <!-- <div class="card-subtitle">41 Listings</div> -->
+      <ng-template #noPoster>
+        <img src="assets/imgs/placeholder.jpg" />
+      </ng-template>
+    </ion-card>
 </ion-content>

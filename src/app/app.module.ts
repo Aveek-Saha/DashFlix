@@ -18,6 +18,7 @@ import { NowPlayingProvider } from '../providers/now-playing/now-playing';
 import { DetailsPage } from '../pages/details/details';
 import { UpcomingProvider } from '../providers/upcoming/upcoming';
 import { UpcomingPage } from '../pages/upcoming/upcoming';
+import { PopularProvider } from '../providers/popular/popular';
 
 Pro.init('bf5b53eb', {
   appVersion: '0.0.1'
@@ -74,7 +75,8 @@ export class MyErrorHandler implements ErrorHandler {
     NowPlayingProvider,
     HttpClient,
     HttpClientModule,
-    UpcomingProvider
+    UpcomingProvider,
+    PopularProvider
   ]
 })
 export class AppModule {}
