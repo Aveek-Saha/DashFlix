@@ -19,8 +19,10 @@
 <ion-content>
   <ion-card>
   
-    <img src="https://image.tmdb.org/t/p/w1280{{item.poster_path}}" />
-  
+    <img *ngIf="item.poster_path!=null; else noPoster" src="https://image.tmdb.org/t/p/w1280{{item.poster_path}}" />
+    <ng-template #noPoster>
+      <img src="../../assets/imgs/placeholder.jpg" />
+    </ng-template>
     <ion-card-content>
       <ion-card-title>
         {{item.title}}

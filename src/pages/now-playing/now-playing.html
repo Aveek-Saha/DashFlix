@@ -18,8 +18,11 @@
 
 <ion-content>
     <ion-card *ngFor="let movie of (movies | async)?.results" (click)="itemSelected(movie)">
-      <img src="https://image.tmdb.org/t/p/w1280{{movie.backdrop_path}}" />
+      <img *ngIf="movie.backdrop_path!=null; else noPoster" src="https://image.tmdb.org/t/p/w1280{{movie.backdrop_path}}" />
       <div class="card-title">{{ movie.title }}</div>
       <!-- <div class="card-subtitle">41 Listings</div> -->
+      <ng-template #noPoster>
+        <img src="../../assets/imgs/placeholder.jpg" />
+      </ng-template>
     </ion-card>
 </ion-content>

@@ -86,4 +86,5 @@
         <variable name="CHANNEL_NAME" value="Master" />
         <variable name="UPDATE_METHOD" value="background" />
     </plugin>
+    <engine name="android" spec="7.0.0" />
 </widget>
