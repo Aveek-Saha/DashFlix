@@ -5,7 +5,7 @@
 
 Check out what movies are new and trending, with one tap! DashFlix is built with Ionic and designed to be simple and clutter free. Download it <a href="https://github.com/Aveek-Saha/DashFlix/releases"> here.</a> Coming soon to the PlayStore
 
-#How to use
+# How to use
 
 ### 1. The application
 JUst download it and discover Popular, upcoming and now playing movies. Use the navigation drawer to get around.
