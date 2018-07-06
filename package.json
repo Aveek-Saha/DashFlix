@@ -2,7 +2,7 @@
   "name": "DashFlix",
   "version": "0.0.1",
   "author": "Aveek Saha",
-  "homepage": "http://ionicframework.com/",
+  "homepage": "https://aveek-saha.github.io/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -44,7 +44,7 @@
     "@ionic/app-scripts": "^3.1.10",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project",
+  "description": "A quick way to check out the latest, upcoming and popular movies",
   "cordova": {
     "plugins": {
       "cordova-plugin-ionic": {
