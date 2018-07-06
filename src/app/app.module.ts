@@ -48,10 +48,7 @@ export class MyErrorHandler implements ErrorHandler {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    NowPlayingPage,
-    UpcomingPage,
-    DetailsPage
+    HomePage
   ],
   imports: [
     BrowserModule,
