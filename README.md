@@ -10,7 +10,7 @@ Check out what movies are new and trending, with one tap! DashFlix is built with
 ### 1. The application
 JUst download it and discover Popular, upcoming and now playing movies. Use the navigation drawer to get around.
 ### 2. Building from the repo
-Clone the repository, then navigate to it on your terminal and run ```npm install```, once all the dependencies have finished downloading, run ```ionic serve ``` to test it in your browser, and ```ionic cordova build android --prod ``` to build it Android.
+Clone the repository, then navigate to it on your terminal and run ```npm install```, once all the dependencies have finished downloading, run ```ionic serve ``` to test it in your browser, and ```ionic cordova build android --prod ``` to build it on Android.
 
 # Features
 <ul>
