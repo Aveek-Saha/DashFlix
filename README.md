@@ -1,7 +1,9 @@
-<p align="center">
-  <a href="https://github.com/Aveek-Saha/DashFlix/releases"><img width="150" src="https://github.com/Aveek-Saha/DashFlix/blob/master/icon.png"></a>
-  <h1>Dash Flix</h1>
-</p>
+<h1 align="center">
+	<br>
+  Dash Flix
+	<br>
+</h1>
+
 
 Check out what movies are new and trending, with one tap! DashFlix is built with Ionic and designed to be simple and clutter free. Download it <a href="https://github.com/Aveek-Saha/DashFlix/releases"> here.</a> Coming soon to the PlayStore
 
